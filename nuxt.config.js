@@ -5,6 +5,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  router: {
+    base: '/web-playground/',
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'web-playground',
@@ -17,7 +21,12 @@ export default {
       { hid: 'description', name: 'description', content: '' },
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/favicon.png', size: '32x32' },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        href: '/web-playground/favicon.png',
+        size: '32x32',
+      },
     ],
   },
 
