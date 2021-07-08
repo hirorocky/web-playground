@@ -65,7 +65,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url('/images/toppage/bg.svg');
+  background-image: url('/web-playground/toppage/bg.svg');
   background-size: cover;
   font-family: 'Russo One', 'Noto Sans JP';
   font-weight: 700;
