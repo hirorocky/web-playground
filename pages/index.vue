@@ -40,6 +40,13 @@ export default {
           title: '動物園',
           detail: '追従するメニューとジャンプ',
         },
+        {
+          index: 1,
+          to: '/space2',
+          linkText: '2',
+          title: '水族館',
+          detail: 'スクロールとアニメーション',
+        },
       ],
       selectedMenuTitle: '',
       selectedMenuDetail: '',
