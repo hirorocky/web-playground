@@ -38,6 +38,7 @@ export default {
     '~/plugins/vue-scrollto',
     { src: '~/plugins/aos', ssr: false },
     '~/plugins/kinesis',
+    { src: '~/plugins/particles-bg', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

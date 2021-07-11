@@ -1,7 +1,13 @@
 <template>
   <div class="container">
     <Header></Header>
-    <div class="background"></div>
+    <particles-bg
+      id="bg"
+      type="custom"
+      :config="bgConfig"
+      :canvas="{ backgroundColor: 'rgb(50, 70, 134)' }"
+      :bg="true"
+    />
     <div id="content">
       <div class="item">
         <div class="item-text">
@@ -73,22 +79,41 @@ export default {
           image: '/web-playground/space2/urchin.png',
         },
       ],
+      bgConfig: {
+        num: [1, 1],
+        rps: 0.1,
+        life: [0.1, 3],
+        v: [0.2, 3],
+        tha: [-30, 30],
+        body: '/web-playground/space2/bubble.png',
+        alpha: [0, 0.3],
+        scale: [0.01, 0.2],
+        position: 'all',
+        cross: 'dead',
+        random: 1,
+        g: -1,
+      },
     }
   },
 }
 </script>
 
 <style lang="scss" scoped>
+#bg {
+  position: fixed !important;
+  z-index: -1 !important;
+}
+
 #content {
   display: flex;
   flex-direction: column;
   grid-row-gap: 30vh;
-  background-color: rgb(61, 101, 155);
   text-align: center;
   min-height: 100vh;
   padding: 50vh 0;
 }
 .item {
+  z-index: 1;
   .item-image {
     width: auto;
     height: auto;
