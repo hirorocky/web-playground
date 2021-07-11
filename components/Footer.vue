@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     ©
-    <a href="https://github.com/hirorocky">hirorocky</a>
+    <a href="https://github.com/hirorocky/web-playground">hirorocky</a>
   </div>
 </template>
 
