@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <Header></Header>
+    <div class="background"></div>
     <div id="content">
       <div class="item">
         <div class="item-text">
@@ -8,6 +9,7 @@
           <div class="detail">どんな生き物がいるのかな？</div>
         </div>
       </div>
+
       <div
         v-for="item in items"
         :id="item.title"
@@ -16,11 +18,19 @@
         data-aos="fade-down"
         data-aos-anchor-placement="top-center"
       >
-        <img class="item-image" :src="item.image" />
-        <div class="item-text">
-          <div class="title">{{ item.title }}</div>
-          <div class="detail">{{ item.detail }}</div>
-        </div>
+        <kinesis-container>
+          <kinesis-element :strength="30">
+            <img class="item-image" :src="item.image" />
+          </kinesis-element>
+        </kinesis-container>
+        <kinesis-container>
+          <kinesis-element :strength="10" type="rotate">
+            <div class="item-text">
+              <div class="title">{{ item.title }}</div>
+              <div class="detail">{{ item.detail }}</div>
+            </div>
+          </kinesis-element>
+        </kinesis-container>
       </div>
     </div>
     <Footer></Footer>
@@ -41,25 +51,25 @@ export default {
         {
           id: 2,
           title: 'トラフグ',
-          detail: '泳がないと生きられない',
+          detail: '解毒してから食べましょう',
           image: '/web-playground/space2/fugu.png',
         },
         {
           id: 3,
           title: 'ヤリイカ',
-          detail: '泳がないと生きられない',
+          detail: '一夜干しおいしい',
           image: '/web-playground/space2/squid.png',
         },
         {
           id: 4,
           title: '毛ガニ',
-          detail: '泳がないと生きられない',
+          detail: '無言で食べましょう',
           image: '/web-playground/space2/crab.png',
         },
         {
           id: 5,
           title: 'ムラサキウニ',
-          detail: '泳がないと生きられない',
+          detail: 'とげとげ痛い',
           image: '/web-playground/space2/urchin.png',
         },
       ],
@@ -72,7 +82,7 @@ export default {
 #content {
   display: flex;
   flex-direction: column;
-  grid-row-gap: 50vh;
+  grid-row-gap: 30vh;
   background-color: rgb(61, 101, 155);
   text-align: center;
   min-height: 100vh;

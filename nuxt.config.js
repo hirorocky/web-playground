@@ -34,7 +34,11 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/vue-scrollto', { src: '~/plugins/aos', ssr: false }],
+  plugins: [
+    '~/plugins/vue-scrollto',
+    { src: '~/plugins/aos', ssr: false },
+    '~/plugins/kinesis',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
